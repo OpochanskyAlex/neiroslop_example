@@ -22,13 +22,13 @@ def get_current_user(
     )
     try:
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=[settings.ALGORITHM])
-        user_id: int = payload.get("sub")
-        if user_id is None:
+        user_id_str = payload.get("sub")
+        if user_id_str is None:
             raise credentials_exception
     except JWTError:
         raise credentials_exception
 
-    user = db.get(User, user_id)
+    user = db.get(User, int(user_id_str))
     if user is None:
         raise credentials_exception
     return user

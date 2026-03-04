@@ -1,0 +1,77 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+input, textarea, button {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  background: #4f46e5;
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+  width: auto;
+}
+button:hover { background: #4338ca; }
+
+.error { color: #dc2626; }
+
+.auth-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.auth-container h1 { margin-top: 0; }
+
+.dashboard {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.dashboard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.dashboard header h1 { margin: 0; }
+.login-count { margin: 0.25rem 0 0; color: #666; }
+
+.note-form {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+.note-form textarea { resize: vertical; }
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.notes-list li {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-bottom: 0.75rem;
+}
+.notes-list li small { color: #888; }
+.notes-list li p { margin: 0.4rem 0 0; }
